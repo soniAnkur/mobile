@@ -1,0 +1,59 @@
+<ion-view view-title="Book Now">
+  <ion-content>
+    <div class="row">
+      <div class="col">
+        <li class="item item-toggle">
+          Today
+          <label class="toggle toggle-balanced">
+            <input type="checkbox" checked="">
+
+            <div class="track">
+              <div class="handle"></div>
+            </div>
+          </label>
+        </li>
+      </div>
+
+      <div class="col">
+        <li class="item item-toggle">
+          Routine
+          <label class="toggle toggle-balanced">
+            <input type="checkbox" checked="">
+
+            <div class="track">
+              <div class="handle"></div>
+            </div>
+          </label>
+        </li>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col col-40">
+        <ionic-timepicker input-obj="fromTime">
+          <button class="button button-block button-clear button-calm">
+            <standard-time-meridian etime='fromTime.inputEpochTime'>From</standard-time-meridian>
+          </button>
+        </ionic-timepicker>
+      </div>
+      <div class="col col-20">
+
+      </div>
+      <div class="col col-40">
+        <ionic-timepicker input-obj="toTime">
+          <button class="button button-block button-clear button-calm ">
+            <standard-time-meridian etime='toTime.inputEpochTime'>To</standard-time-meridian>
+          </button>
+        </ionic-timepicker>
+      </div>
+    </div>
+
+
+    <ionic-datepicker date="currentDate" min="minDate" max="maxDate" callback="datePickerCallback">
+      <button class="button button-block button-positive"> {{ currentDate | date:'MMMM/dd/yyyy' }} </button>
+    </ionic-datepicker>
+
+
+  </ion-content>
+</ion-view>
+
